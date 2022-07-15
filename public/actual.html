@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCryptoPortfolio</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="icon" href=https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg>
+<body>
+<main>
+    <div class="main-container">
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Name</div>
+                <div class="col col-2">Price (AUD)</div>
+                <div class="col col-3">24H Change</div>
+                <div class="col col-4">In</div>
+                <div class="col col-5">Out</div>
+                <div class="col col-6">Net</div>
+                <div class="col col-7">Options</div>
+            </li>
+        </ul>
+        <div class="container add-coin-btn-container">
+            <button class="add-coin-btn">Add coin</button>
+        </div>
+    </div>
+    <div class="add-coin-inter-cont">
+        <div class="add-coin-inter">
+            <div class="close-container">
+                <button class="close"></button>
+            </div>
+            <div class="search-container">
+                <input class="input search-bar" placeholder="search coin...">
+                <ul class="search-list"></ul>
+            </div>
+            <div class="general-price-container">
+                <div class="dollar-price-container">
+                    <span class="price-label">Enter amount (AUD): </span>
+                    <span class="dollar-sign">$</span>
+                    <input class="input dollar-price-input">
+                </div>
+                <div class="coin-price-container">
+                    <span class="price-label">Enter coin amount: </span>
+                    <input class="input coin-price-input" placeholder="(eg: BTC, ETH)">
+                </div>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="client-scripts/client.js"></script>
+</body>
+</html>
