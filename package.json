@@ -13,6 +13,7 @@
     "axios": "^0.26.0",
     "body-parser": "^1.19.1",
     "browserify": "^17.0.0",
+    "dotenv": "^16.0.1",
     "express": "^4.17.2",
     "mongoose": "^6.2.1",
     "mysql": "^2.18.1",

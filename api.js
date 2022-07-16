@@ -1,5 +1,6 @@
 'use strict'
 const axios = require('axios');
+require('dotenv').config()
 const AUD_UUID = 'OEomm4hQzk_M'
 
 var coinOptions = {
@@ -16,7 +17,7 @@ var coinOptions = {
     },
     headers: {
       'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-      'x-rapidapi-key': 'd73d966e0emsh98c94c8eb1443c4p1740ccjsn300fa6bdbd83'
+      'x-rapidapi-key': process.env.API_KEY
     }
   };
 
@@ -25,7 +26,7 @@ var refCurrOptions = {
     url: 'https://coinranking1.p.rapidapi.com/reference-currencies',
     headers: {
       'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-      'x-rapidapi-key': 'd73d966e0emsh98c94c8eb1443c4p1740ccjsn300fa6bdbd83'
+      'x-rapidapi-key': process.env.API_KEY
     }
   };
 
