@@ -1,1 +1,8 @@
+*.DS_Store
+*.vscode
+*dSYM
+*.out
+*.txt
+*.o
+misc
 .env
