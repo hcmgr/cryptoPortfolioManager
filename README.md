@@ -9,3 +9,5 @@ Welcome to the Crypto Portfolio Tracker! This JavaScript project is designed to 
 - Portfolio Management: Users can create and manage their own crypto portfolios within the application. They can add, remove, and update holdings, as well as track their portfolio's overall value and performance.
 
 - User Authentication: To protect user data and provide a personalized experience, user authentication is implemented. Each user has a secure account and can access their portfolio data with appropriate authentication.
+
+##### NOTE: Site not currently hosted as there were some problems with the droplet #####
