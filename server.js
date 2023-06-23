@@ -3,7 +3,7 @@ const mysql = require('mysql')
 const path = require('path')
 const app = express()
 const { createHash } = require('crypto')
-const port = 3000
+const port = 8080
 const api = require('./api.js')
 const res = require('express/lib/response')
 const { resolve } = require('path')
@@ -162,7 +162,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
 app.get('/raw-data', async function(req, res){
     let query_string = "SELECT * FROM raw_coin_data"
     db.query(query_string, (err, result)=>{
@@ -294,67 +293,3 @@ app.listen(port, () => {
 	register_user({username: 'nah', password: 'bruh'})
 	register_user({username: 'yeah', password: 'bruh'})
 })
-
-/*
-TODO:
--update coin data every 30 seconds generally
-	-decision to be made whether update only when client is on website OR;
-	-just update database every 30 secs no matter what 
-	
-	-leaning towards first, just given that if I want web hosting,
-	its a lot more bandwith for no reason the second way
-
--loading signal
-	-add coin btn before search list has loaded
-	-maybe load earlier 
-	-submit_btn after add coin
-
--make new tx btn look better
-*/
-
-
-//-----DEPRECATED CODE-----//
-
-//---two methods to add raw coin data to db table---//
-
-//turned the db query for user_details into a promise so can return a value once its resolved//
-
-/* 	db.query(query_string, (err, result)=>{
-		if (err){
-			console.log(err)
-		}
-		else{
-			for (let user of result){
-				//username in database?
-				if (user.username === username){
-					let salt = user.salt
-					let db_pass_hash = user.p0assword_hash
-					let user_pass_hash = hash(password+salt)
-					//password hash matches one stored in database?
-					if (db_pass_hash === user_pass_hash){
-						console.log("welcome back!")
-						return true
-					}
-				}
-			}
-			console.log('fuck off gabonza')
-			return false
-		}
-	}) 	
-*/
-
-//used to get code, price, tf_change and img_link from the raw_coin_data table//
-
-/*  let query_string = `SELECT code, price, tf_change, img_link FROM raw_coin_data WHERE name = '${name}'`
-    db.query(query_string, (err, result)=>{
-        if (err){
-            console.log(err)
-        }
-        else{
-            code = result[0].code
-            price = result[0].price
-            tf_change = result[0].tf_change
-            img_link = result[0].img_link
-            out_AUD = price*in_coin
-            net = out_AUD - in_AUD
-        } */
